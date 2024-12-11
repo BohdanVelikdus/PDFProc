@@ -1,0 +1,10 @@
+services:
+  sqlite:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: sqlite
+    hostname: bohdan
+    volumes:
+      - ./sqlite_volume:/db
+    command: ["tail", "-f", "/dev/null"]
